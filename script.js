@@ -1,7 +1,8 @@
 var container = document.getElementById("container");
-// var age = document.getElementById("age").value;
-// var height = document.getElementById("height").value;
-// var weight = document.getElementById("weight").value;
+// var age = document.getElementById("age");
+// var height = document.getElementById("height");
+// var weight = document.getElementById("weight");
+// var gender = document.getElementById("gender");
 var result = document.getElementById("result");
 var display = document.getElementById("display");
 var comment = document.getElementById("comment");
@@ -14,6 +15,7 @@ function getBMI(){
     let age = document.getElementById("age").value;
     let height = document.getElementById("height").value;
     let weight = document.getElementById("weight").value;
+    let gender = document.getElementById("gender").value;
 
     if (age === "" && height === "" && weight === "") {
         alert("Please enter all values");
@@ -37,6 +39,13 @@ function getBMI(){
 
 
     bmi = weight / (height/100*height/100);
+
+    if (gender === "male") {
+        bmi = bmi * 1.05;
+    } else if (gender === "female") {
+        bmi = bmi * 1.03;
+    }
+
     bmi = bmi.toFixed(1);
 }
 
