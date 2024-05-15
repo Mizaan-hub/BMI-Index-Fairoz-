@@ -37,11 +37,14 @@ function changeVisuals(){
         submit.style.backgroundColor = "#bf6b6b"
         comment.innerHTML = "DECENT HEALTH, GOOD STRETCHING IS ENOUGH";
     }
-    else{
+    else if(bmi >= 30){
         container.style.backgroundColor = "#ff5f5f";
         container.style.color = "var(--light)";
         submit.style.backgroundColor = "#c233e6";
         comment.innerHTML = "IT's TIME FOR SOME DUMB-BELLS AND DEAD-LIFTS"
+    }
+    else{
+        comment.innerHTML = "SOMETHING WENT WRONG."
     }
 }
 
@@ -49,6 +52,7 @@ function changeMessage(){
 
 }
 submit.addEventListener('click',() =>{
+    
     getBMI();
     changeVisuals();
     if(age < 16 && age >60){
