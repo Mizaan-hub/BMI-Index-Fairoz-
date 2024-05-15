@@ -151,5 +151,6 @@ submit.addEventListener('click',() =>{
     
     getBMI();
     changeVisuals();
+    localStorage.clear();
 })
 
