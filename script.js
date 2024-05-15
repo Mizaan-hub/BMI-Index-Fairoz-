@@ -46,11 +46,11 @@ function getBMI(){
         bmi = bmi * 1.03;
     }
 
-    if (age >= 10 && age <= 20) {
+    if (age >= 10 && age <= 30) {
         bmi = bmi * 0.95;
-    } else if (age > 20 && age <= 40) {
+    } else if (age > 30 && age <= 50) {
         bmi = bmi * 1.0;
-    } else if (age > 40 && age <= 80) {
+    } else if (age > 50 && age <= 80) {
         bmi = bmi * 1.1;
     }
 
