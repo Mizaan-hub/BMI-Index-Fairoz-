@@ -81,7 +81,4 @@ submit.addEventListener('click',() =>{
     
     getBMI();
     changeVisuals();
-    if(age < 16 && age >60){
-        comment.innerHTML = "AT THIS AGE, YOU SHOULDN'T BE CONCERN ABOUT YOUR BMI, BMI FAILS TO JUDGE. AND YOU ALREADY ARE IN GOOD SHAPE.";
-    }
 })
