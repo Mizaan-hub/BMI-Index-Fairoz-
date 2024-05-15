@@ -154,3 +154,8 @@ submit.addEventListener('click',() =>{
     localStorage.clear();
 })
 
+
+    console.log('Kgs: ',kgs);
+    console.log('cm: ',cm);
+    console.log('height: ', height);
+    console.log('weight: ',weight);
