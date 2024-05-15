@@ -1,7 +1,7 @@
 var container = document.getElementById("container");
-var age = document.getElementById("age").value;
-var height = document.getElementById("height");
-var weight = document.getElementById("weight");
+// var age = document.getElementById("age").value;
+// var height = document.getElementById("height").value;
+// var weight = document.getElementById("weight").value;
 var result = document.getElementById("result");
 var display = document.getElementById("display");
 var comment = document.getElementById("comment");
@@ -10,7 +10,33 @@ var input = document.getElementsByTagName("input")
 var bmi;
 
 function getBMI(){
-    bmi = weight.value / (height.value/100*height.value/100);
+
+    let age = document.getElementById("age").value;
+    let height = document.getElementById("height").value;
+    let weight = document.getElementById("weight").value;
+
+    if (age === "" && height === "" && weight === "") {
+        alert("Please enter all values");
+        return;
+    }
+
+    if (age < 10 || age > 100) {
+        alert("Age should be between 10 and 60");
+        return;
+    }
+
+    if (height < 50 || height > 250) {
+        alert("Height should be between 50cm and 250cm");
+        return;
+    }
+
+    if (weight < 20 || weight > 250) {
+        alert("Weight should be between 20kg and 250kg");
+        return;
+    }
+
+
+    bmi = weight / (height/100*height/100);
     bmi = bmi.toFixed(1);
 }
 
