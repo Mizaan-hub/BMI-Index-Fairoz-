@@ -43,6 +43,14 @@ function convert(){
     let kgs = localStorage.getItem('weight');
     let cm = localStorage.getItem('height');
 
+    if(kgs == 0.00){
+        kgs = "";
+    }
+
+    if(cm == 0.00){
+        cm = "";
+    }
+
     document.getElementById('height').value = cm;
     document.getElementById('weight').value = kgs;
 
