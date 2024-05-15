@@ -49,9 +49,9 @@ function getBMI(){
     if (age >= 10 && age <= 20) {
         bmi = bmi * 0.95;
     } else if (age > 20 && age <= 40) {
-        bmi = bmi * 1.00;
+        bmi = bmi * 1.0;
     } else if (age > 40 && age <= 80) {
-        bmi = bmi * 1.05;
+        bmi = bmi * 1.1;
     }
 
     bmi = bmi.toFixed(1);
