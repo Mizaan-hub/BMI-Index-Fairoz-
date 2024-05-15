@@ -90,3 +90,28 @@ input,select,option{
     transform: translateY(5px);
     transition: 200ms;
 }
+
+.link{
+    color: var(--dark);
+    font-weight: 200;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a{
+        text-decoration: none;
+    }
+
+    a:hover{
+        text-decoration: underline;
+        color: orangered;
+        font-weight: 600;
+        text-shadow: 0.5rem 0.5rem 1rem;
+        font-size: 16px;
+    }
+}
+
+.meters{
+    margin-top: 1rem;
+}

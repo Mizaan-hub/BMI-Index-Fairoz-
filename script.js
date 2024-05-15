@@ -7,15 +7,60 @@ var result = document.getElementById("result");
 var display = document.getElementById("display");
 var comment = document.getElementById("comment");
 var submit = document.getElementById("submit");
-var input = document.getElementsByTagName("input")
+var input = document.getElementsByTagName("input");
+// var feet = document.getElementById("feet");
+// var inches = document.getElementById("inches");
+// var meters = document.getElementById("meters");
+// var cm = document.getElementById("cm");
+// var pounds = document.getElementById("pounds");
+// var kgs = document.getElementById("kgs");
 var bmi;
 
+function convert(){
+
+    let feet = document.getElementById("feet").value;
+    let inches = document.getElementById("inches").value;
+    let meters = document.getElementById("meters").value;
+    let cm = document.getElementById("cm").value;
+    let pounds = document.getElementById("pounds").value;
+    let kgs = document.getElementById("kgs").value;
+
+    meters = (feet * 0.3048) + (inches * 0.0254);
+    cm = meters * 100
+    kgs = pounds * 0.453592
+
+    document.getElementById('meters').value = meters.toFixed(2);
+    document.getElementById('cm').value = cm.toFixed(2);
+    document.getElementById('kgs').value = kgs.toFixed(2);
+    
+    localStorage.setItem('weight',kgs.toFixed(2));
+    localStorage.setItem('height',cm.toFixed(2));
+    console.log('Kgs: ',kgs);
+    console.log('cm: ',cm);
+
+}
+
+    let kgs = localStorage.getItem('weight');
+    let cm = localStorage.getItem('height');
+
+    document.getElementById('height').value = cm;
+    document.getElementById('weight').value = kgs;
+
 function getBMI(){
+
+    
+    console.log('Kgs: ',kgs);
+    console.log('cm: ',cm);
 
     let age = document.getElementById("age").value;
     let height = document.getElementById("height").value;
     let weight = document.getElementById("weight").value;
     let gender = document.getElementById("gender").value;
+
+    
+
+    console.log('height: ', height);
+    console.log('weight: ',weight);
 
     if (age === "" && height === "" && weight === "") {
         alert("Please enter all values");
@@ -99,3 +144,4 @@ submit.addEventListener('click',() =>{
     getBMI();
     changeVisuals();
 })
+
