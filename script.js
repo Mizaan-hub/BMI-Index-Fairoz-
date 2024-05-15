@@ -20,8 +20,8 @@ function getBMI(){
         return;
     }
 
-    if (age < 10 || age > 100) {
-        alert("Age should be between 10 and 60");
+    if (age < 10 || age > 80) {
+        alert("Age should be between 10 and 80");
         return;
     }
 
