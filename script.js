@@ -107,6 +107,11 @@ function getBMI(){
         bmi = bmi * 1.1;
     }
 
+    localStorage.clear();
+    age = '';
+    height = '';
+    weight = '';
+
     bmi = bmi.toFixed(1);
 }
 
@@ -151,10 +156,6 @@ submit.addEventListener('click',() =>{
     
     getBMI();
     changeVisuals();
-    localStorage.clear();
-    age = '';
-    height = '';
-    weight = '';
 })
 
 
