@@ -156,6 +156,11 @@ submit.addEventListener('click',() =>{
     
     getBMI();
     changeVisuals();
+    localStorage.clear();
+    age = '';
+    height = '';
+    weight = '';
+
 })
 
 
